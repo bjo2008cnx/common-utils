@@ -1,6 +1,6 @@
 package com.github.common.util.io;
 
-import lombok.extern.slf4j.Slf4j;
+
 
 import java.io.*;
 import java.util.Collection;
@@ -10,7 +10,7 @@ import java.util.Collection;
  *
  * @author Wangxm
  */
-@Slf4j
+
 public class StreamUtil {
     /**
      * 通用的关闭方法

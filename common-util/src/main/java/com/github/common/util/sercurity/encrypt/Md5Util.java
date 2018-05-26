@@ -1,7 +1,7 @@
 package com.github.common.util.sercurity.encrypt;
 
 import com.github.common.util.lang.ExceptionUtil;
-import lombok.extern.slf4j.Slf4j;
+
 import com.github.common.util.lang.StringUtil;
 
 import java.io.File;
@@ -15,7 +15,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5工具类.
  */
-@Slf4j
+
 public class Md5Util {
 
     protected static char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};

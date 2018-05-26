@@ -1,6 +1,6 @@
 package com.github.common.util.lang;
 
-import lombok.extern.slf4j.Slf4j;
+
 import com.github.common.constant.GlobalConstant;
 
 import java.io.UnsupportedEncodingException;
@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 /**
  * 一些通用的字符串处理
  */
-@Slf4j
+
 public class StringUtil {
 
     private static final int INDEX_NOT_FOUND = -1;

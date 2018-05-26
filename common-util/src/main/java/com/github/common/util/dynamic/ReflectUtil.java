@@ -1,6 +1,6 @@
 package com.github.common.util.dynamic;
 
-import lombok.extern.slf4j.Slf4j;
+
 import com.github.common.util.lang.ExceptionUtil;
 
 import java.lang.reflect.Field;
@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 反射工具类
  */
-@Slf4j
+
 public class ReflectUtil {
     private static Object operate(Object obj, String fieldName, Object fieldVal, String type) {
         Object result = null;
