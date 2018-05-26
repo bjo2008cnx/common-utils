@@ -12,6 +12,31 @@
 
     <modules>
         <module>common-util</module>
-        <module>common-util-ex</module>
+        <module>common-util-ext</module>
+        <module>common-util-test</module>
     </modules>
+
+    <properties>
+        <!-- 编译时配置 -->
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skip_maven_deploy>false</skip_maven_deploy>
+        <skip_maven_test>true</skip_maven_test>
+        <lombok.version>1.16.20</lombok.version>
+        <slf4j.version>1.7.25</slf4j.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+    </dependencies>
 </project>

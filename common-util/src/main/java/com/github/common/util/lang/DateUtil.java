@@ -1,4 +1,4 @@
-package com.github.common.util.date;
+package com.github.common.util.lang;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
