@@ -1,7 +1,7 @@
 package com.github.common.util.bean;
 
 import com.github.common.util.collection.CollectionUtil;
-import com.github.common.util.validate.Valid;
+import com.github.common.util.lang.Valid;
 
 import java.beans.IntrospectionException;
 import java.lang.reflect.InvocationTargetException;

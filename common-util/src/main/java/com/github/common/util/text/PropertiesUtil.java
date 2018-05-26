@@ -2,7 +2,7 @@
 package com.github.common.util.text;
 
 import com.github.common.constant.GlobalConstant;
-import com.github.common.util.io.common.StreamUtil;
+import com.github.common.util.io.StreamUtil;
 
 import java.io.*;
 import java.util.Properties;

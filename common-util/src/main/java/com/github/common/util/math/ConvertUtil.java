@@ -1,6 +1,6 @@
 package com.github.common.util.math;
 
-import com.github.common.util.validate.Valid;
+import com.github.common.util.lang.Valid;
 
 import java.io.ByteArrayOutputStream;
 

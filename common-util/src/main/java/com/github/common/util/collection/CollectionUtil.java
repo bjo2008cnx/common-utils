@@ -1,7 +1,7 @@
 package com.github.common.util.collection;
 
 import com.github.common.constant.GlobalConstant;
-import com.github.common.util.validate.Valid;
+import com.github.common.util.lang.Valid;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 package com.github.common.util.text;
 
-import com.github.common.util.io.common.StreamUtil;
+import com.github.common.util.io.StreamUtil;
 import com.github.common.util.lang.ExceptionUtil;
 
 import java.io.ByteArrayInputStream;

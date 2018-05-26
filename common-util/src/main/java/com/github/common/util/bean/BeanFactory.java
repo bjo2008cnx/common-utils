@@ -1,6 +1,6 @@
 package com.github.common.util.bean;
 
-import com.github.common.util.validate.Valid;
+import com.github.common.util.lang.Valid;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
