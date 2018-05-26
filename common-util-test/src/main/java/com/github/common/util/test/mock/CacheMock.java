@@ -1,4 +1,4 @@
-package com.github.common.util.ext.mock;
+package com.github.common.util.test.mock;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

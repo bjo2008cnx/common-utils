@@ -1,4 +1,4 @@
-package com.github.common.util.ext.lang;
+package com.github.common.util.test.lang;
 
 import java.util.Map;
 
