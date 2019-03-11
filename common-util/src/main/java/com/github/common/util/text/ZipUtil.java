@@ -25,7 +25,7 @@ public class ZipUtil {
         } catch (IOException e) {
             throw ExceptionUtil.transform(e);
         } finally {
-            StreamUtil.close(gzip);
+            StreamUtil.closeQuietly(gzip);
         }
         return new sun.misc.BASE64Encoder().encode(out.toByteArray());
     }
@@ -59,9 +59,9 @@ public class ZipUtil {
         } catch (IOException e) {
             throw ExceptionUtil.transform(e);
         } finally {
-            StreamUtil.close(ginzip);
-            StreamUtil.close(in);
-            StreamUtil.close(out);
+            StreamUtil.closeQuietly(ginzip);
+            StreamUtil.closeQuietly(in);
+            StreamUtil.closeQuietly(out);
         }
 
         return decompressed;
@@ -91,8 +91,8 @@ public class ZipUtil {
         } catch (IOException e) {
             compressed = null;
         } finally {
-            StreamUtil.close(zout);
-            StreamUtil.close(out);
+            StreamUtil.closeQuietly(zout);
+            StreamUtil.closeQuietly(out);
         }
         return compressedStr;
     }
@@ -127,9 +127,9 @@ public class ZipUtil {
         } catch (IOException e) {
             decompressed = null;
         } finally {
-            StreamUtil.close(zin);
-            StreamUtil.close(in);
-            StreamUtil.close(out);
+            StreamUtil.closeQuietly(zin);
+            StreamUtil.closeQuietly(in);
+            StreamUtil.closeQuietly(out);
         }
         return decompressed;
     }

@@ -70,7 +70,7 @@ public class PropertiesUtil {
         } catch (IOException e) {
             throw new RuntimeException("Error loading properties file.", e);
         } finally {
-            StreamUtil.close(inputStream);
+            StreamUtil.closeQuietly(inputStream);
         }
     }
 

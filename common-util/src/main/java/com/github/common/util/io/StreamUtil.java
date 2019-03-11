@@ -31,18 +31,7 @@ public class StreamUtil {
         }
     }
 
-    /**
-     * 通用的关闭方法
-     *
-     * @param closeables
-     */
-    public static void close(final Closeable... closeables) {
-        if (closeables != null) {
-            closeQuietly(closeables);
-        }
-    }
-
-    public static void close(final Collection<? extends Closeable> closeables) {
+    public static void closeQuietly(final Collection<? extends Closeable> closeables) {
         if (closeables != null) {
             closeQuietly(closeables.toArray(new Closeable[closeables.size()]));
         }
@@ -61,7 +50,6 @@ public class StreamUtil {
                     closeable = null;
                 }
             } catch (Throwable ignore) {
-
             }
         }
     }

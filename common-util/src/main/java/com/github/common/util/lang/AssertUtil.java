@@ -1,7 +1,5 @@
 package com.github.common.util.lang;
 
-import com.github.common.util.lang.StringUtil;
-
 import java.util.Collection;
 import java.util.Map;
 
@@ -12,11 +10,11 @@ public class AssertUtil {
 
     /**
      * 表达式必须不为null,否则抛出异常。自动检测object的类型，如果是String，将判断是否为null或者"".如果是Collection或Map,将判断其size
-     * 使用示例：assertNotNullOrEmpty(key, "key");如果key为空，则抛出IllegalArgumentException（"key cannot be null or empty"）
+     * 使用示例：notEmpty(key, "key");如果key为空，则抛出IllegalArgumentException（"key cannot be null or empty"）
      *
      * @param object 待校验的对象
      */
-    public static void assertNotNullOrEmpty(Object object, String messageKey) {
+    public static void notEmpty(Object object, String messageKey) {
         StringBuilder builder = new StringBuilder();
         append(object, messageKey, builder);
         if (builder.length() > 0) {
@@ -28,7 +26,7 @@ public class AssertUtil {
      * 表达式必须不为null,否则抛出异常
      * 如果两个参数都为空，输出异常的message示例：name&age cannot be null or empty
      */
-    public static void assertNotNullOrEmpty(Object object, String messageKey, Object object2, String messageKey2) {
+    public static void notEmpty(Object object, String messageKey, Object object2, String messageKey2) {
         StringBuilder builder = new StringBuilder();
         append(object, messageKey, builder);
         append(object2, messageKey2, builder);
@@ -40,7 +38,7 @@ public class AssertUtil {
     /**
      * 表达式必须不为null,否则抛出异常
      */
-    public static void assertNotNullOrEmpty(Object object, String messageKey, Object object2, String messageKey2, Object object3, String messageKey3) {
+    public static void notEmpty(Object object, String messageKey, Object object2, String messageKey2, Object object3, String messageKey3) {
         StringBuilder builder = new StringBuilder();
         append(object, messageKey, builder);
         append(object2, messageKey2, builder);
@@ -88,12 +86,12 @@ public class AssertUtil {
         }
     }
 
-    public static void assertAssignable(Class<?> superType, Class<?> subType) {
-        assertAssignable(superType, subType, "");
+    public static void isAssignable(Class<?> superType, Class<?> subType) {
+        isAssignable(superType, subType, "");
     }
 
-    public static void assertAssignable(Class<?> superType, Class<?> subType, String message) {
-        assertNotNullOrEmpty(superType, "Type to check against must not be null");
+    public static void isAssignable(Class<?> superType, Class<?> subType, String message) {
+        notEmpty(superType, "Type to check against must not be null");
         if (subType == null || !superType.isAssignableFrom(subType)) {
             throw new IllegalArgumentException(message + subType + " is not assignable to " + superType);
         }
