@@ -1483,4 +1483,34 @@ public class StringUtil {
             throw ExceptionUtil.transform(e);
         }
     }
+
+    /**
+     * 如果以某个字符开头，去掉该字符。如：/abc => abc
+     * @return
+     */
+    public static String removeIfStartsWith(String text, char toRemove) {
+        if (isEmpty(text)) {
+            return text;
+        }
+        if (text.charAt(0) == toRemove) {
+            return text.substring(1);
+        } else {
+            return text;
+        }
+    }
+
+    /**
+     * 如果不以某个字符开头，增加该字符。如：abc => /abc
+     * @return
+     */
+    public static String addIfNotStartsWith(String text, char toAdd) {
+        if (isEmpty(text)) {
+            return text;
+        }
+        if (text.charAt(0) == toAdd) {
+            return text;
+        } else {
+            return toAdd + text;
+        }
+    }
 }
